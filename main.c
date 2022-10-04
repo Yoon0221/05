@@ -5,30 +5,30 @@
 
 int main(int argc, char *argv[]) 
 {
-	int x, y, num;
-	char k;
+	int answer = 59;
+	int num;
+	int cnt = 0;
+			
+	do
+	{
+		printf("Guess a number : ");
+		scanf("%d", &num);
+		
+		if (num > answer)
+		{
+			printf("high! \n");
+		}
+		else if (num < answer)
+		{
+			printf("low! \n");
+		}
+		
+		cnt = cnt + 1;
+	}
+	while (num != answer);
+		
+	printf("Congratulation! trials : %i \n", cnt);	
 	
-	printf("enter the calculation : ");
-	scanf("%d %c %d", &x, &k, &y);
-	
-	if (k == '+')
-	{
-		num = x + y;
-	}
-	else if (k == '-')
-	{
-		num = x - y;
-	}
-	else if (k == '*')
-	{
-		num = x * y;
-	}
-	else
-	{
-		num = x / y;
-	}
-	
-	printf("= %i \n", num);
 	
 	return 0;
 }
