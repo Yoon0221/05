@@ -5,19 +5,30 @@
 
 int main(int argc, char *argv[]) 
 {
-	int i;
-	int num;
-	int sum = 0;
+	int x, y, num;
+	char k;
 	
-	printf("input a number : ");
-	scanf("%d", &num); 
+	printf("enter the calculation : ");
+	scanf("%d %c %d", &x, &k, &y);
 	
-	for (i = 1; i <= num; i++)
+	if (k == '+')
 	{
-		sum = sum + i;
+		num = x + y;
+	}
+	else if (k == '-')
+	{
+		num = x - y;
+	}
+	else if (k == '*')
+	{
+		num = x * y;
+	}
+	else
+	{
+		num = x / y;
 	}
 	
-	printf("The result is %i \n", sum);
+	printf("= %i \n", num);
 	
 	return 0;
 }
